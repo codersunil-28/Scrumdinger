@@ -17,6 +17,7 @@
 		43226D52289C221500A26FC2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43226D51289C221500A26FC2 /* Theme.swift */; };
 		43226D54289C2F2100A26FC2 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43226D53289C2F2100A26FC2 /* DailyScrum.swift */; };
 		43226D56289C36A800A26FC2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43226D55289C36A800A26FC2 /* CardView.swift */; };
+		436AA37E289ED54B0029131D /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AA37D289ED54B0029131D /* TrailingIconLabelStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		43226D51289C221500A26FC2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		43226D53289C2F2100A26FC2 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		43226D55289C36A800A26FC2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		436AA37D289ED54B0029131D /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				43226D2A289C1A3100A26FC2 /* Assets.xcassets */,
 				43226D2C289C1A3100A26FC2 /* Preview Content */,
 				43226D55289C36A800A26FC2 /* CardView.swift */,
+				436AA37D289ED54B0029131D /* TrailingIconLabelStyle.swift */,
 			);
 			path = Scrumdinger;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43226D54289C2F2100A26FC2 /* DailyScrum.swift in Sources */,
+				436AA37E289ED54B0029131D /* TrailingIconLabelStyle.swift in Sources */,
 				43226D52289C221500A26FC2 /* Theme.swift in Sources */,
 				43226D29289C1A3000A26FC2 /* MeetingView.swift in Sources */,
 				43226D27289C1A3000A26FC2 /* ScrumdingerApp.swift in Sources */,
