@@ -14,7 +14,7 @@ struct ScrumsView: View {
         List {
             ForEach(scrums) { scrum in
                 //SwiftUI automatically adds a disclosure indicator to the row.
-                NavigationLink(destination: Text(scrum.title)) {
+                NavigationLink(destination: DetailView(scrum: scrum)) {
                     CardView(scrum: scrum)
                                         
                 }
