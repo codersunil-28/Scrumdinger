@@ -27,8 +27,10 @@ struct DetailEditView: View {
                         //In the slider’s label closure, add a Text view for accessibility use.
                         Text("Length")
                     }
+                    .accessibilityValue("\(Int(data.lengthInMinutes)) minutes")
                     Spacer()
                     Text("\(Int(data.lengthInMinutes)) minutes")
+                        .accessibilityHidden(true)
                 }
             }
             Section(header: Text("Attendees")) {
@@ -58,6 +60,7 @@ struct DetailEditView: View {
                                 }
                           }) {
                     Image(systemName: "plus.circle.fill")
+                        .accessibilityLabel("Add attendee")
                     }
                     .disabled(newAttendeeName.isEmpty)
                 }
