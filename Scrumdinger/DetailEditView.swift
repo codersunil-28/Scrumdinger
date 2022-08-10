@@ -10,6 +10,8 @@ import SwiftUI
 struct DetailEditView: View {
     //The current view manages the state of the data property.
     @State private var data = DailyScrum.Data()
+    //The newAttendeeName property will hold the attendee name that the user enters.
+    @State private var newAttendeeName = ""
     
     var body: some View {
         Form{
@@ -27,6 +29,37 @@ struct DetailEditView: View {
                     }
                     Spacer()
                     Text("\(Int(data.lengthInMinutes)) minutes")
+                }
+            }
+            Section(header: Text("Attendees")) {
+                ForEach(data.attendees) { attendee in
+                    Text(attendee.name)
+                }
+                /*
+                Add an onDelete modifier to remove attendees from the scrum data.
+                 
+                The framework calls the closure you pass to onDelete when the
+                user swipes to delete a row.
+                */
+                .onDelete { indices in
+                    data.attendees.remove(atOffsets: indices)
+                }
+                HStack {
+                    /*
+                     The binding keeps newAttendeeName in sync with the contents of the
+                     text field. It doesn’t affect the original DailyScrum model data.
+                    */
+                    TextField("New Attendee", text: $newAttendeeName)
+                    Button(action: {
+                                withAnimation {
+                                    let attendee = DailyScrum.Attendee(name: newAttendeeName)
+                                    data.attendees.append(attendee)
+                                    newAttendeeName = ""
+                                }
+                          }) {
+                    Image(systemName: "plus.circle.fill")
+                    }
+                    .disabled(newAttendeeName.isEmpty)
                 }
             }
         }
