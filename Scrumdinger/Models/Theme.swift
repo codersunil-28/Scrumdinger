@@ -13,7 +13,7 @@ SwiftUI treats colors as View instances that we
 can add directly to a view hierarchy.
 */
 
-enum Theme: String {
+enum Theme: String, CaseIterable, Identifiable {
     case bubblegum
     case buttercup
     case indigo
@@ -44,6 +44,10 @@ enum Theme: String {
     
     var name: String {
             rawValue.capitalized
+        }
+    
+    var id: String {
+            name
         }
     
 }
