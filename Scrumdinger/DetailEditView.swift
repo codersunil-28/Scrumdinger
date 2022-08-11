@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct DetailEditView: View {
-    //The current view manages the state of the data property.
-    @State private var data = DailyScrum.Data()
+    @Binding var data: DailyScrum.Data
     //The newAttendeeName property will hold the attendee name that the user enters.
     @State private var newAttendeeName = ""
     
@@ -73,6 +72,6 @@ struct DetailEditView: View {
 
 struct DetailEditView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailEditView()
+        DetailEditView(data: .constant(DailyScrum.sampleData[0].data))
     }
 }
